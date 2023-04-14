@@ -1,3 +1,4 @@
+#line 1 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
 // = STL
 #include <Arduino.h>
 
@@ -48,6 +49,35 @@ auto temp_ok  = true;
 
 rgb_lcd lcd;
 
+#line 51 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void boot_pins();
+#line 52 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void boot_airq();
+#line 73 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void boot_lcd();
+#line 75 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void setup();
+#line 84 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void conduct_air_q_scan();
+#line 99 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void conduct_temp_scan();
+#line 103 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void conduct_alarm_check();
+#line 110 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void run_alarm();
+#line 114 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void query_disable_state();
+#line 122 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void select_menu();
+#line 131 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void next_frame();
+#line 135 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void print_alarm();
+#line 141 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void print_menu();
+#line 158 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
+void loop();
+#line 51 "/home/williams/Dev/MicroProjects/static-sensor-and-warning-system/static-sensor-and-warning-system.ino"
 void boot_pins () { pinMode(BUZZER, OUTPUT); pinMode(DISABLE, INPUT); }
 void boot_airq () {
     s16 err;
@@ -170,3 +200,4 @@ void loop() {
     if (alarm) print_alarm();
     else       print_menu();
 }
+
